@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&display=swap');
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+html, body{
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+p{
+  font-size: 21px;
+}
+
+h1, .h1{
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+h2, .h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+h3, .h3{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+  letter-spacing: -0.02em;
+}
+
+h4{
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 2rem;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+h4.title:after{
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 5px;
+  background-image: linear-gradient(135deg, rgb(18, 38, 77) 0%, rgb(132, 12, 49) 24.48%, rgb(199, 9, 39) 49.3%, rgb(252, 102, 35) 74.31%, rgb(255, 189, 48) 100%);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  border: none;
+}
+h4.title.white:after{
+  background: rgb(255, 255, 255);
+}
+
+.section-general {
+  padding: 50px;
+  overflow: hidden;
+}
+
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: rgb(255, 90, 44);
+  width: 50px;
+  height: 50px;
+  transition: all 0.4s;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+header a {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+header .logo {
+  font-size: 20px;
+  font-style: italic;
+  margin-left: 30px;
+}
+
+header .contact-button {
+  font-weight: 700;
+  transition: transform 0.1s;
+  font-size: 20px;
+}
+
+header .contact-button:hover {
+  transform: scale(1.02);
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav {
+  margin-right: 30px;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  color: #fff;
+  height: 100%;
+  position: relative;
+  background-image: url(../img/working-img-4.jpg);
+  background-size: cover;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero-text {
+  font-size: 38px;
+}
+
+.icon-hero {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* text-align: center; */
+  /* width: 100%; */
+}
+
+.hero-text-three {
+  font-size: 28px;
+}
+
+.span-hero {
+  font-weight: bolder;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    text-align: center;
+  }
+
+  #hero .container {
+    padding-top: 40px;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about-title {
+  margin-bottom: 70px;
+}
+
+.about-span {
+  font-weight: 700;
+  font-size: 29px;
+}
+
+.about-span-two {
+  font-weight: 400;
+}
+
+.container-client {
+  margin-bottom: 70px;
+}
+
+.about-container {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.about-p-two {
+  font-size: 20px;
+  margin-top: -15px;
+}
+
+.about-sub {
+  margin-top: 70px;
+  font-size: 21px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+
+.img-client {
+  width: 140px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.img-client:hover {
+  filter: grayscale(0%);
+}
+
+.about-p-span {
+  font-weight: bolder;
+}
+
+.about-p-two {
+  font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+ouer-offer
+--------------------------------------------------------------*/
+.our-offer {
+  /* background: #f2f2f2; */
+  color: #fff;
+  background-image: linear-gradient(94.2deg, rgb(18, 38, 77) -13.61%, rgb(132, 12, 49) 16.11%, rgb(199, 9, 39) 46.25%, rgb(252, 102, 35) 76.61%, rgb(255, 189, 48) 107.8%);
+  padding: 70px;
+}
+
+.our-offer h3 {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.our-container-one {
+  position: relative;
+  left: 80px;
+}
+
+.our-text {
+  font-size: 5.5rem;
+  padding: 30px 0 20px;
+}
+
+
+@media (max-width: 990px) {
+  .our-container-one {
+    text-align: center;
+    left: 0;
+    bottom: 15px;
+  }
+
+  .our-container-two {
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------------------
+# why Section
+--------------------------------------------------------------*/
+.why-section-one {
+  margin: 30px;
+}
+
+.why-section h2 {
+  font-weight: bolder;
+}
+
+.why-text-one {
+  font-size: 22px;
+}
+
+.why-text-two {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.card-1 {
+  background: rgb(210, 210, 210);
+  padding: 30px;
+
+}
+
+.card-text-1 {
+  color: #222;
+  font-size: 1.5rem;
+}
+
+.card-2 {
+  background: #222;
+  padding: 30px;
+
+}
+
+.card-text-2 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.custom-card {
+  border: none;
+  transition: transform 0.2s, font-size 0.2s;
+  overflow: auto;
+  border-radius: 1.563rem;
+
+}
+
+.custom-card:hover {
+  transform: translateY(5px);
+  font-size: 18px;
+}
+
+.card-img-container {
+  overflow: hidden;
+}
+
+.card-img-zoom {
+  transition: transform 0.3s;
+}
+
+.custom-card:hover .card-img-zoom {
+  transform: scale(1.02);
+}
+
+/*-----------------------------------------------
+# nearshoring Section
+--------------------------------------------------------------*/
+.nearshoring-section {
+  background-color: rgb(242, 242, 242);
+  padding: 50px 0;
+}
+
+.nearshoring-section h3 {
+
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-image: linear-gradient(94.17deg, rgb(18, 38, 77) 2.01%, rgb(132, 12, 49) 13.67%, rgb(199, 9, 39) 25.48%, rgb(252, 102, 35) 37.39%, rgb(255, 189, 48) 49.62%);
+  -webkit-background-clip: text;
+  color: transparent;  
+}
+/*
+.nearshoring-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(135deg, rgb(18, 38, 77) 0%, rgb(132, 12, 49) 24.48%, rgb(199, 9, 39) 49.3%, rgb(252, 102, 35) 74.31%, rgb(255, 189, 48) 100%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  border: none;
+}
+*/
+.nearshoring-section .items {
+  /* background: rgb(210, 210, 210); */
+  /* color: rgb(0, 0, 0); */
+  padding: 14px;
+  border-radius: 14px;
+}
+
+/*-----------------------------------------------
+# testimonial Section
+--------------------------------------------------------------*/
+.testimonials {
+  color: #fff;
+  background-image: linear-gradient(94.2deg, rgb(18, 38, 77) -13.61%, rgb(132, 12, 49) 16.11%, rgb(199, 9, 39) 46.25%, rgb(252, 102, 35) 76.61%, rgb(255, 189, 48) 107.8%);
+}
+
+.carrousel-container {
+  margin-top: 20px;
+}
+
+.testimonials h2 {
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.testimonials .quotes {
+  text-align: center;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 300;
+  padding: 50px 0 0;
+  margin-bottom: -30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.testimonials .carrousel-text {
+  font-size: 3rem;
+  font-style: italic
+}
+.testimonials .carrousel-text.small {
+  font-size: 2rem;
+}
+.testimonials .carrousel-text.large {
+  font-size: 3.5rem;
+}
+
+.testimonials .carrousel-text-two {
+  font-size: 1.3rem;
+  margin-top: 50px;
+}
+
+/*--------------------------------------------------------------
+Counts
+--------------------------------------------------------------*/
+
+.counts-section {
+  margin-top: 40px;
+}
+
+.counts-section h2 {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.counts-section p {
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-top: -14px;
+}
+
+.counts-box {
+  text-align: center;
+  margin: 0 12px;
+}
+
+.counts-box .span-add {
+  font-size: 40px;
+}
+
+.counts-box span {
+  font-size: 60px;
+  display: block;
+  font-weight: 700;
+  color: #e84118;
+  line-height: 90px
+    /* font-size: 46px; */
+}
+
+.counts-box p {
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+/*--------------------------------------------------------------
+Final section
+--------------------------------------------------------------*/
+.final-section {
+  margin-top: 60px;
+  padding: 20px 0px;
+}
+
+.final-p {
+  font-size: 38px;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+
+.about-text {
+  margin-bottom: 100px;
+
+}
+
+.about-text-final {
+  font-size: 26px;
+
+}
+
