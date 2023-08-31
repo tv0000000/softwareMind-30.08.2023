@@ -136,13 +136,32 @@ header .contact-button:hover {
 }
 
 .navbar {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar-nav {
   margin-right: 30px;
 }
 
+/* otra opción de header sino elminar completa y descomenar navbar*/
+.navbar {
+  background-color: transparent !important;
+  transition: background-color 0.8s ease;
+}
+
+.navbar a {
+  color: #fff !important;
+}
+
+/* Styles on scroll */
+.navbar-scrolled {
+  background-color: #f8f9fa !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled a {
+  color: black !important;
+}
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -263,7 +282,7 @@ header .contact-button:hover {
   }
 
   .img-about {
-    width: 21.5rem;
+    width: 20.5rem;
   }
 }
 
@@ -320,6 +339,11 @@ ouer-offer
 }
 
 @media (max-width: 576px) {
+
+  .our-container-one {
+    margin-bottom: 0;
+  }
+
   .our-offer h3 {
     font-size: 1.5rem;
   }
@@ -353,23 +377,12 @@ ouer-offer
 /*--------------------------------------------------------------
 # why Section
 --------------------------------------------------------------*/
-/* Problemas responsive cards */
-
 .why-section-one {
   margin: 30px;
 }
 
 .why-section h2 {
   font-weight: bolder;
-}
-
-.why-text-one {
-  font-size: 22px;
-}
-
-.why-text-two {
-  font-size: 28px;
-  margin-top: 20px;
 }
 
 .card-1 {
@@ -416,6 +429,7 @@ ouer-offer
 
 .card-img-zoom {
   transition: transform 0.3s;
+  width: 33rem;
 }
 
 .custom-card:hover .card-img-zoom {
@@ -435,6 +449,20 @@ ouer-offer
 
   .card-text-2 {
     font-size: 1rem;
+  }
+
+  .card-img-zoom {
+    width: 28.1rem;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .custom-card {
+    width: 300px;
+  }
+  
+  .custom-card-1 {
+    margin: 0 -5rem;
   }
 }
 
@@ -545,11 +573,11 @@ Counts
 }
 
 .counts-box .span-add {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .counts-box span {
-  font-size: 60px;
+  font-size: 3.75rem;
   display: block;
   font-weight: 700;
   color: #e84118;
@@ -561,6 +589,12 @@ Counts
   font-size: 22px;
 }
 
+@media (max-width: 576px) {
+  .counts-box .span-add {
+    font-size: 2rem;
+  }
+
+}
 
 /*--------------------------------------------------------------
 Final section
