@@ -63,3 +63,15 @@ window.addEventListener("scroll", function () {
   }
 });
 
+const navbarTogglerIcon = document.querySelector('.navbar-toggler-icon');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 100) {
+    navbarTogglerIcon.classList.remove('navbar-dark');
+    navbarTogglerIcon.classList.add('navbar-light');
+  } else {
+    navbarTogglerIcon.classList.remove('navbar-light');
+    navbarTogglerIcon.classList.add('navbar-dark');
+  }
+});
+
+
